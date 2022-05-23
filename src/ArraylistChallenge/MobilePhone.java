@@ -24,6 +24,27 @@ public class MobilePhone {
         return this.myContacts.indexOf(contact);
     }
 
+    public boolean updateContact(Contact oldContact, Contact newContact) {
+        int foundPosition = findContact(oldContact);
+        if (foundPosition <= 0) {
+            System.out.println(oldContact.getName() + " is not found");
+            return false;
+        }
+        this.myContacts.set(foundPosition, newContact);
+        System.out.println(oldContact.getName() + " has been replaced with " + newContact.getName());
+        return true;
+    }
+
+    public boolean removeCotnact(Contact contact) {
+        int foundPosition = findContact(contact);
+
+        if (foundPosition >= 0) {
+            this.myContacts.remove(foundPosition);
+            return true;
+        }
+        return false;
+    }
+
     private int findContact(String contactName) {
         for (int i = 0; i < this.myContacts.size(); i++) {
             Contact contact = myContacts.get(i);
@@ -32,5 +53,12 @@ public class MobilePhone {
             }
         }
         return -1;
+    }
+
+    public String queryContact(Contact contact) {
+        if (findContact(contact) >= 0) {
+            return contact.getName();
+        }
+        return null;
     }
 }
