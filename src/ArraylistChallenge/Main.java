@@ -54,7 +54,8 @@ public class Main {
     }
 
     private static void updateCotnact() {
-
+    String name, phoneNumber, searchContact;
+        System.out.println("");
     }
 
     private static void addNewContact() {
