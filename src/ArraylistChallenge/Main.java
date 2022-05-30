@@ -40,6 +40,9 @@ public class Main {
                 case 6:
                     printActions();
                     break;
+                case 7:
+                    printIndex();
+                    break;
 
             }
         }
@@ -86,6 +89,15 @@ public class Main {
 
     }
 
+    private static void printIndex() {
+        String name;
+        System.out.print("index of:");
+        name = scanner.nextLine();
+        Contact contact = mobilePhone.queryContact(name);
+        mobilePhone.printIndex(contact);
+
+
+    }
 
     private static void removeContact() {
         String searchContact;
@@ -119,7 +131,6 @@ public class Main {
     }
 
 
-
     private static void startPhone() {
         System.out.println("Starting the Phone");
     }
@@ -132,5 +143,6 @@ public class Main {
         System.out.println("4 - To remove a contact");
         System.out.println("5 - Query if an existing contact exists");
         System.out.println("6 - To print the list of available actions");
+        System.out.println("7 - To print index of any contact");
     }
 }
