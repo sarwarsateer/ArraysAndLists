@@ -73,6 +73,7 @@ public class Demo {
                     quit = true;
                     break;
                 case 1:
+                    //preventing to print same item twice while going forward and backward
                     if (!goingForward) {
                         if (listIterator.hasNext()) {
                             listIterator.next();
