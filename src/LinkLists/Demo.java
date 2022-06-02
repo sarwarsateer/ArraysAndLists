@@ -45,7 +45,7 @@ public class Demo {
                 stringListIterator.add(newCity);
                 return true;
             } else if (comparison < 0) {
-
+                //nothing
             }
         }
         stringListIterator.add(newCity);
