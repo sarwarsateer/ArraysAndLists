@@ -30,6 +30,7 @@ public class Demo {
         System.out.println("+++++++++++++++++++++++");
     }
 
+    //inserting items to the linked list in an order
     private static boolean addInOrder(LinkedList<String> linkedList, String newCity) {
         ListIterator<String> stringListIterator = linkedList.listIterator();
         while (stringListIterator.hasNext()) {
