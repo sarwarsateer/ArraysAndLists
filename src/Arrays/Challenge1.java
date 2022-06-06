@@ -17,17 +17,19 @@ public class Challenge1 {
     private static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
 
-        int[] intArrays = getIntegers(5);
+        int[] intArrays = getIntegers();
         printArrays(intArrays);
 
         System.out.println("After soring");
         printArrays(sortIntegers(intArrays));
 
     }
-    private static int[] getIntegers(int arrayLength) {
+    private static int[] getIntegers() {
+
         System.out.println("Enter the Numbers \r");
-        int[] values = new int[arrayLength];
-        for (int i = 0; i < arrayLength; i++) {
+        int[] values = new int[5];
+
+        for (int i = 0; i < 5; i++) {
             values[i] = scanner.nextInt();
         }
         return values;
