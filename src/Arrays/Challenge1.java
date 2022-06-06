@@ -19,6 +19,7 @@ public class Challenge1 {
 
         int[] intArrays = getIntegers(5);
         printArrays(intArrays);
+
         System.out.println("After soring");
         printArrays(sortIntegers(intArrays));
 
