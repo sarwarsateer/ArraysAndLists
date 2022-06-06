@@ -36,10 +36,12 @@ public class Challenge1 {
     }
 
     private static void printArrays(int arrays[]) {
+
         System.out.println("Entered Values \r");
         for (int i = 0; i < arrays.length; i++) {
             System.out.println(arrays[i]);
         }
+
     }
 
     private static int[] sortIntegers(int arrays[]) {
